@@ -1,0 +1,374 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-image: url(../image/mar.jpg);
+	background-size: 100%;
+}
+header{
+	width: 100%;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid darkgray;
+}
+.navegacion ul{
+	list-style: none;
+}
+.menu{
+	padding: 10px;
+	width: 10%;
+	margin: auto;
+	margin-top: 
+}
+.menu span{
+	background: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	font-size: 40px;
+}
+.menu > li{
+	position: relative;
+}
+.menu li a{
+	text-decoration: none;
+}
+.submenu{
+	position: absolute;
+	background: rgba(0, 0, 0, 0.3);
+	display: none;
+	margin: auto;
+}
+.submenu li a, b, button{
+	text-align: center;
+	display: block;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+}
+.btn_cerrar{
+	width: 100%;
+	background: none;
+	border: none;
+	margin: auto;
+	cursor: pointer;
+}
+.btn_cerrar:hover {
+		background: darkgreen;
+	}
+.submenu li a:hover{
+	background: darkgreen;
+}
+.menu li:hover .submenu{
+	display: block;
+}
+main{
+	width: 80px;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.7);
+	align-items: center;
+	justify-content: center;
+	margin-top: 35px;
+}
+.menu-admin{
+	width: 100%;
+	padding: 20px;
+	font-size: 40px;
+	padding: 20px;
+	align-items: center;
+	justify-content: center;
+}
+.menu-admin p{
+	color: #fff;
+	font-size: 10px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.menu-admin a{
+	text-decoration: none;
+}
+.icon1{
+	color: darkgreen;
+}
+.icon1:hover{
+	color: #62F000;
+}
+.icon2{
+	color: #020A5F;
+}
+.icon2:hover{
+	color: #0017FF;
+}
+.icon3{
+	color: purple;
+}
+.icon3:hover{
+	color: pink;
+}
+.icon4{
+	color: #D65506;
+}
+.icon4:hover{
+	color: #FEA900;
+}
+.icon5{
+	color: darkred;
+}
+.icon5:hover{
+	color: #FF0000;
+}
+.dark-body{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	display: none;
+}
+#cerrar{
+	position: absolute;
+	right: 3px;
+	top: 1px;	
+}
+.agregar-producto{
+	width: 95%;
+	max-width: 800px;
+	background: #fff;
+	margin: auto;
+	margin-top: 70px;
+	padding: 10px 20px;
+}
+.agregar-producto h1{
+	text-align: center;
+	padding: 10px;
+}
+.agregar-producto input, select{
+	width: 100%;
+	padding: 10px;
+	border-radius: 12px;
+	margin-bottom: 10px;
+	background: rgba(68, 68, 68, 0.3);
+}
+#stock_actual, #stock_minimo{
+	width: 81%;
+	float: left;
+}
+label{
+	width: 19%;
+	display: block;
+	float: left;
+	cursor: pointer;
+}
+.btns{
+	width: 100%;
+	text-align: center;
+}
+.btn-agregar{
+	border: 1px solid darkgray;
+	border-radius: 10px;
+	background: green;
+	text-align: center;
+	color: #fff;
+	padding: 10px;
+}
+.btn-borrar-campos{
+	border: 1px solid darkgray;
+	border-radius: 10px;
+	background: red;
+	text-align: center;
+	color: #fff;
+	padding: 10px;
+}
+#dark-body2{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	display: none;
+}
+.titulo_form_insumo{
+	width: 100%;
+	max-width: 700px;
+	padding: 10px;
+	margin: auto;
+	margin-top: 60px;
+	text-align: center;
+	background: #fff;
+	border-bottom: 2px solid green;
+	border-radius: 10px;
+	color: #000;
+}
+.contenido{
+	width: 100%;
+	max-width: 800px;
+	margin: auto;
+	margin-top: 10px;
+	background:#fff;
+	color: #000;
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+label{
+	width: 25%;
+	display: block;
+	float: left;
+	cursor: pointer;
+}
+input, textarea{
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid darkgray;
+	background: rgba(68, 68, 68, 0.3);
+	color: #000;
+}
+textarea{
+	height: 100PX;
+	resize: none;
+}
+input:focus, textarea:focus{
+	border: none;
+	border-bottom: 3px solid #0075FF;
+	outline: none;
+}
+input.error, input.error:focus{
+	border: none;
+	border-bottom: 2px solid red;
+}
+input.error::placeholder{
+	color: #fff;
+}
+#errorCodigoProducto{
+	color: red;
+	display: none;
+}
+#btn-crear{
+	width: 30%;
+	display: block;
+	margin: auto;
+	border: 1px solid darkgray;
+	border-radius: 10px;
+	background: green;
+	text-align: center;
+	color: #fff;
+	padding: 10px;
+}
+#btn-crear:active{
+	background: #77BF32;
+}
+.back{
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+	display: inline-block;
+	margin-top: 12px;
+}
+.back:active{
+	color: red;
+}
+#cerrarFormInsumo{
+	position: absolute;
+	right: 3px;
+	top: 1px;	
+}
+
+@media(max-width: 800px){
+	h1, .contenido{
+		width: 85%;
+	}
+}
+.quick-access{
+	width: 90%;
+	max-width: 768px;
+	height: 350px;
+	margin: auto;
+	margin-top: 70px;
+	padding: 10px 20px;
+	
+	color: #fff;
+	text-align: center;
+}
+.inventory-products{
+	width: 47%;
+	float: left;
+	border: 1px solid darkgray;
+	margin-top: 10px;
+	margin-left: 20px;
+	padding: 10px 20px;
+	text-align: center;
+	border-radius: 12px;
+	background: rgba(0, 0, 0, 0.7);
+}
+.inventory-products p{
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.inventory-products a{
+	width: 50%;
+	text-decoration: none;
+	color: #fff;
+	background: darkgreen;
+	padding: 10px;
+	display: block;
+	margin: auto;
+	border-radius: 12px;
+}
+.inventory-supplies{
+	width: 47%;
+	float: left;
+	border: 1px solid darkgray;
+	margin-top: 10px;
+	margin-left: 15px;
+	padding: 10px 20px;
+	text-align: center;
+	border-radius: 12px;
+	background: rgba(0, 0, 0, 0.7);
+}
+.inventory-supplies p{
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.inventory-supplies a{
+	width: 50%;
+	text-decoration: none;
+	color: #fff;
+	background: darkgreen;
+	padding: 10px;
+	display: block;
+	margin: auto;
+	border-radius: 12px;
+}
+.account-config{
+	width: 100%;
+	float: left;
+	border: 1px solid darkgray;
+	margin-top: 10px;
+	margin-left: 5px;
+	padding: 10px 20px;
+	text-align: center;
+	border-radius: 12px;
+	background: rgba(0, 0, 0, 0.7);
+}
+.account-config p{
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.account-config a{
+	width: 50%;
+	text-decoration: none;
+	color: #fff;
+	background: darkgreen;
+	padding: 10px;
+	display: block;
+	margin: auto;
+	border-radius: 12px;
+}
+@media(max-width: 768px){
+	.inventory-products, .inventory-supplies{
+		width: 100%;
+	}
+}

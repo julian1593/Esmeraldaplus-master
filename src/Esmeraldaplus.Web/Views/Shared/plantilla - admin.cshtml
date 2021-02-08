@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Esmeraldaplus.Web</title>
+    <link rel="stylesheet" href="../css/home-admin.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    @RenderSection("homeadmin", required: false)
+</head>
+<body>
+    <header>
+        <nav class="navegacion">
+            <ul class="menu">
+                <li>
+                    <a href="#"><span class="icon-user options"></span></a>
+                    <ul class="submenu">
+                        <li><b>@User.Identity.Name</b></li>
+                        <li><a href="">Configuración</a></li>
+                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                            <button type="submit" class="btn_cerrar">Cerrar Sesion</button>
+                        </form>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    @RenderBody()
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="../js/home-admin.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

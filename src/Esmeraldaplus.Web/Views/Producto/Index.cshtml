@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Esmeraldaplus.Core.Domain.Producto>
+
+@{
+    ViewData["Title"] = "lista de producos";
+    Layout = "~/Views/Shared/plantilla - admin.cshtml";
+}
+
+<link href="~/css/list_product.css" rel="stylesheet" />
+
+<main>
+    <div class="menu-admin">
+        <a asp-area="" asp-controller="homeadmin" asp-action="Index"><span class="icon-home icon1"></span><br><p>Inicio</p></a>
+        <a asp-area="" asp-controller="usuarios" asp-action="Index"><span class="icon-user icon2"></span><br><p>Lista de Usuarios</p></a>
+        <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><span class="icon-user-check icon3"><br><p>Config. Cuenta</p></span></a>
+        <a asp-area="" asp-controller="producto" asp-action="Index"><span class="icon-inventory icon4"><br><p>Productos</p></span></a>
+        <a asp-area="" asp-controller="inventario" asp-action="Index"><span class="icon-inventory icon5"><br><p>Inventario</p></span></a>
+    </div>
+</main>
+
+
+<p class="create">
+    <a asp-action="Create" class="add">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id Producto
+            </th>
+            <th>
+                Cantidaad Producto
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Precio Producto
+            </th>
+            <th>
+                Id Tipo Producto
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidaadProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipoProductoNavigation.NombreProducto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdProducto" class="actualizar">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdProducto" class="detalles">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdProducto" class="borrar">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

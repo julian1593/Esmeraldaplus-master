@@ -1,0 +1,20 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/plantilla.cshtml";
+}
+@section home{
+    <link href="~/css/homepage.css" rel="stylesheet" />
+}
+
+<div class="home-page">
+    <h1 class="titulo-welcome">Te Damos la Bienvenida a Esmeralda Plus</h1>
+</div>
+<div>
+    <a href="contact.html" class="link-contact"><span class="icon-bubbles"></span></a>
+</div>
+
+

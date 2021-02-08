@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Producto1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Vista_Genelar {
+    <link rel="stylesheet" href="../css/buy.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+}
+
+<nav>
+    <ul>
+        <li><a asp-area="" asp-controller="Home" asp-action="Index1">Inicio</a></li>
+        <li><a asp-area="" asp-controller="Productos" asp-action="Catalogo1">Productos</a></li>
+        <li><a asp-area="" asp-controller="QuienesSomos" asp-action="Index1">Quienes Somos</a></li>
+        <li><a asp-area="" asp-controller="Contactenos" asp-action="Index1">Contactenos</a></li>
+    </ul>
+</nav>
+
+<div class="menu">
+    <span class="icon-menu"> Menu</span>
+</div>
+
+<div class="buy">
+
+    <div class="image">
+        <img src="../image/trajes.jpg" alt="">
+    </div>
+
+    <div class="information">
+        <h1>Trajes Antifluido</h1>
+        <p>
+            Los trajes antifluidos poseen gran resistencia al rasgado, frote y deslizamiento en superficies,
+            es completamente reutilizable de una sola pieza con capucha y cremallera frontal, rápido secado,
+            fácil cuidado, y viene equipado con costuras de seguridad que evitan la exposición a sustancias,
+            líquidos, partículas o virus
+        </p>
+    </div>
+
+    <div class="cart">
+        <a href=""><span class="icon-cart"></span>Agregar al Carrito</a>
+        <a href=""><span class="icon-credit-card"></span>Comprar</a>
+    </div>
+
+</div>
+

@@ -1,0 +1,49 @@
+﻿@model Esmeraldaplus.Core.Domain.Inventario
+@{ ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/crud.cshtml"; }
+
+
+<link href="~/css/crear_datos.css" rel="stylesheet" />
+
+<h1>Crear</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" class="contenido">
+            <label asp-for="IdInventario" control-label">Id</label>
+            <input asp-for="IdInventario" class="form-control" />
+            <span asp-validation-for="IdInventario" class="text-danger"></span>
+
+            <label asp-for="FechaIngreso" class="control-label"></label>
+            <input asp-for="FechaIngreso" class="form-control" />
+            <span asp-validation-for="FechaIngreso" class="text-danger"></span>
+
+
+            <label asp-for="IdUsuario" class="control-label"></label>
+            <select asp-for="IdUsuario" class="form-control" asp-items="ViewBag.IdUsuario"></select>
+
+
+            <label asp-for="IdOrdenCompra" class="control-label"></label>
+            <select asp-for="IdOrdenCompra" class="form-control" asp-items="ViewBag.IdOrdenCompra"></select>
+
+            <label asp-for="IdOrdenVenta" class="control-label"></label>
+            <select asp-for="IdOrdenVenta" class="form-control" asp-items="ViewBag.IdOrdenVenta"></select>
+
+
+            <label asp-for="IdPedido" class="control-label"></label>
+            <select asp-for="IdPedido" class="form-control" asp-items="ViewBag.IdPedido"></select>
+
+
+            <label asp-for="IdProducto" class="control-label"></label>
+            <select asp-for="IdProducto" class="form-control" asp-items="ViewBag.IdProducto"></select>
+
+
+            <input type="submit" value="Create" class="btn btn-primary" id="btn-crear" />
+            <a asp-action="Index" class="back">Back to List</a>
+
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

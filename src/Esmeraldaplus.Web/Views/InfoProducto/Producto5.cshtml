@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Producto5";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Vista_Genelar {
+    <link rel="stylesheet" href="../css/buy.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+}
+
+<nav>
+    <ul>
+        <li><a asp-area="" asp-controller="Home" asp-action="Index1">Inicio</a></li>
+        <li><a asp-area="" asp-controller="Productos" asp-action="Catalogo1">Productos</a></li>
+        <li><a asp-area="" asp-controller="QuienesSomos" asp-action="Index1">Quienes Somos</a></li>
+        <li><a asp-area="" asp-controller="Contactenos" asp-action="Index1">Contactenos</a></li>
+    </ul>
+</nav>
+
+<div class="menu">
+    <span class="icon-menu"> Menu</span>
+</div>
+
+<div class="buy">
+
+    <div class="image">
+        <img src="../image/Tapabocas_de_tela_adidas_TALLA_XS-S_(PACK_DE_3)_(UNISEX)_Negro_H13185_01_laydown.jpg" alt="">
+    </div>
+
+    <div class="information">
+        <h1>TapaBocas</h1>
+        <p>El cubrebocas o tapabocas es un utensilio esencial para evitar la contaminación microbiológica emitida por la boca y la nariz. Por ello, su principal función es impedir el contacto de estas cuando se manipulan alimentos u otros productos que puedan verse contaminados.</p>
+    </div>
+
+    <div class="cart">
+        <a href=""><span class="icon-cart"></span>Agregar al Carrito</a>
+        <a href=""><span class="icon-credit-card"></span>Comprar</a>
+    </div>
+
+</div>
+

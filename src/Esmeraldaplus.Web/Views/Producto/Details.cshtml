@@ -1,0 +1,21 @@
+﻿@model Esmeraldaplus.Core.Domain.Producto
+
+@{
+    ViewData["Title"] = "Detalles de Producto";
+    Layout = "~/Views/Shared/crud.cshtml";
+
+}
+
+<link href="~/css/detalles.css" rel="stylesheet" />
+
+
+<div class="contenido">
+    <h3>DETALLES DEL PRODUCTO</h3>
+    <p>ID Producto: @Html.DisplayFor(model => model.IdProducto)</p>
+    <p>Cantidad del Producto: @Html.DisplayFor(model => model.CantidaadProducto)</p>
+    <p>Descripción: @Html.DisplayFor(model => model.Descripcion)</p>
+    <p>Precio Porducto: @Html.DisplayFor(model => model.PrecioProducto)</p>
+    <p>Id Tipo Producto: @Html.DisplayFor(model => model.IdTipoProductoNavigation.IdTipoProducto)</p>
+    <a asp-action="Edit" asp-route-id="@Model.IdProducto" class="edit">Edit</a>
+    <a asp-action="Index" class="back">Back to List</a>
+</div>

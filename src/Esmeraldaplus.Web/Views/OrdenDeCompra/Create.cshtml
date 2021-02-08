@@ -1,0 +1,48 @@
+﻿@model Esmeraldaplus.Core.Domain.OrdenDeCompra
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>OrdenDeCompra</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreProveedor" class="control-label"></label>
+                <input asp-for="NombreProveedor" class="form-control" />
+                <span asp-validation-for="NombreProveedor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorUnitarioProducto" class="control-label"></label>
+                <input asp-for="ValorUnitarioProducto" class="form-control" />
+                <span asp-validation-for="ValorUnitarioProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorTotalProducto" class="control-label"></label>
+                <input asp-for="ValorTotalProducto" class="form-control" />
+                <span asp-validation-for="ValorTotalProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Producto" class="control-label"></label>
+                <input asp-for="Producto" class="form-control" />
+                <span asp-validation-for="Producto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

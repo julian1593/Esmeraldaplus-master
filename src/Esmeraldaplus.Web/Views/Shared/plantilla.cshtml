@@ -1,0 +1,77 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Esmeraldaplus.Web</title>
+    <link href="~/css/fonts.css" rel="stylesheet" />
+    <link href="~/css/paginaprincipal.css" rel="stylesheet" />
+    @RenderSection("home", required: false)
+</head>
+<body>
+    <header class="container-header">
+        <div class="titulo"><h1>Esmeralda plus</h1></div>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            
+                <a class="userName" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Bienvenido @User.Identity.Name!</a>
+            
+
+                <div class="login">
+                    <a asp-area="" asp-controller="homeadmin" asp-action="Index">Administrador</a>
+                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button type="submit" class="nav-link btn btn-link text-dark">Cerrar Sesion</button>
+                    </form>
+                </div>
+        }
+        else
+        {
+            <div class="login">
+                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Iniciar Sesion</a>
+                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Registrarse</a>
+            </div>
+
+        }
+
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+            <li><a asp-area="" asp-controller="Productos" asp-action="Catalogo">Productos</a></li>
+            <li><a asp-area="" asp-controller="QuienesSomos" asp-action="Index">Quienes Somos</a></li>
+            <li><a asp-area="" asp-controller="Contactenos" asp-action="Index">Contactenos</a></li>
+        </ul>
+    </nav>
+
+
+    @RenderBody()
+
+
+    <footer class="footer">
+        <div class="contacto">
+            <div class="siguenos">
+                <p>siguenos</p>
+                <span class="icon-facebook"></span>
+                <span class="icon-twitter"></span>
+                <span class="icon-instagram"></span>
+            </div>
+
+            <div class="contactanos">
+                <p>Contactanos</p>
+                <a href="#">6852899</a>
+                <a href="#">3214567899</a>
+            </div>
+
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

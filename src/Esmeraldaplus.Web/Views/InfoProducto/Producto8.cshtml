@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Producto8";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Vista_Genelar {
+    <link rel="stylesheet" href="../css/buy.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+}
+
+<nav>
+    <ul>
+        <li><a asp-area="" asp-controller="Home" asp-action="Index1">Inicio</a></li>
+        <li><a asp-area="" asp-controller="Productos" asp-action="Catalogo1">Productos</a></li>
+        <li><a asp-area="" asp-controller="QuienesSomos" asp-action="Index1">Quienes Somos</a></li>
+        <li><a asp-area="" asp-controller="Contactenos" asp-action="Index1">Contactenos</a></li>
+    </ul>
+</nav>
+
+<div class="menu">
+    <span class="icon-menu"> Menu</span>
+</div>
+
+<div class="buy">
+
+    <div class="image">
+        <img src="../image/CHAQUETA.webp" alt="">
+    </div>
+
+    <div class="information">
+        <h1>Chaqueta antifluido</h1>
+        <p>Chaqueta de protección completa para la piel de tus brazos, torso, cuello, nariz y boca. Acabado anti fluido en su tela que repele líquidos y salpicaduras, funcionando como una barrera protectora. El tapabocas de la chaqueta NO reemplaza el uso del tapabocas facial.</p>
+    </div>
+
+    <div class="cart">
+        <a href=""><span class="icon-cart"></span>Agregar al Carrito</a>
+        <a href=""><span class="icon-credit-card"></span>Comprar</a>
+    </div>
+
+</div>
+

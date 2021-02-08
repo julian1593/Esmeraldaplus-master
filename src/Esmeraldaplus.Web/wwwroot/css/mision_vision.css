@@ -1,0 +1,194 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial,"Times New roman";
+	background: #fff;
+	color: #000;
+	display: flex;
+	min-height: 100vh;
+	flex-wrap: wrap;
+}
+.container-header{
+	width: 100%;
+	height: 300px;
+	background-image: url(../image/telas.jpg);
+	background-repeat: no-repeat;
+	background-size: 200%;
+	animation: movimiento 8s infinite linear alternate;
+	border-bottom: 1px solid darkgray;
+}
+@keyframes movimiento{
+	form{
+		background-position: top left;
+	}to{
+		background-position: bottom right;
+	}
+}
+.titulo h1{
+	text-align: center;
+	color: #fff;
+	font-size: 70px;
+}
+.login{
+	text-align: center;
+	margin-top: 140px;
+}
+.login a{
+	text-decoration: none;
+	background: green;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px;
+	display: inline-block;
+	margin-left: 5px;
+	border-radius: 12px;
+}
+.login a:active{
+	background: #77BF32;
+}
+nav{
+	width: 100%;
+}
+nav ul{
+	text-align: center;
+	list-style: none;
+	background: #fff;
+	border-bottom: 1px solid darkgray;
+}
+nav ul li{
+	display: inline-block;
+	padding: 20px;
+}
+nav ul li a{
+	color: #000;
+	text-decoration: none;
+}
+nav ul li a:hover{
+	background: rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+	padding: 20px;
+	border-bottom: 4px solid green;
+}
+nav ul li a:active{
+	color: green;
+}
+.menu{
+	font-size: 22px;
+	padding: 16px;
+	background: green;
+	color: #fff;
+	cursor: pointer;
+	display: none;
+}
+
+.container_mv{
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;	
+}
+.mision{
+	float: left;
+	width: 47%;
+	border: 2px solid darkgray;
+	padding: 10px 20px;
+	border-radius: 12px;
+}
+.mision h1{
+	padding: 7px;
+	background: rgba(0, 0, 0, 0.4);	
+	text-align: center;
+	border-radius: 12px;
+	margin-bottom: 10px;
+}
+.vision{
+	float: left;
+	width: 47%;
+	margin-left: 20px;
+	border: 2px solid darkgray;
+	padding: 10px 20px;
+	border-radius: 12px;
+}
+.vision h1{
+	padding: 7px;
+	background: rgba(0, 0, 0, 0.4);	
+	text-align: center;
+	border-radius: 12px;
+	margin-bottom: 10px;
+}
+@media(max-width: 768px){
+	.container_mv{
+		width: 95%;
+	}
+	.mision{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.vision{
+		width: 100%;
+		margin-bottom: 20px;
+		margin-left: 0;
+	}
+	.login{
+		margin-top: 60px;
+	}
+	nav ul{
+		font-size: 10px;
+	}
+}
+.footer{
+	align-self: flex-end;
+	width: 100%;
+	height: 100px;
+	background: #fff;
+	color: #000;
+	border-top: 1px solid darkgray;
+}
+.footer .contacto{
+	margin-left: 500px;
+	float: left;
+}
+.footer .contacto .siguenos{
+	float: left;
+}
+.footer .contacto .siguenos p{
+	text-align: center;
+	font-family: "Times New Roman";
+	font-size: 25px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+.footer .contacto .siguenos span{
+	margin-left: 20px;
+	font-size: 25px;
+	cursor: pointer;
+}
+.footer .contacto .contactanos{
+	float: left;
+	margin-left: 50px;
+}
+.footer .contacto .contactanos p{
+	text-align: center;
+	font-family: "Times New Roman";
+	font-size: 25px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+.footer .contacto .contactanos a{
+	text-align: center;
+	font-size: 15px;
+	display: block;
+	margin-left: 15px;
+}
+.footer .contacto .contactanos a:hover{
+	color: red;
+}
+@media(max-width: 768px){
+	.footer .contacto{
+		margin-left: 75px;
+	}
+}

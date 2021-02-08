@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Producto7";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Vista_Genelar {
+    <link rel="stylesheet" href="../css/buy.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+}
+
+<nav>
+    <ul>
+        <li><a asp-area="" asp-controller="Home" asp-action="Index1">Inicio</a></li>
+        <li><a asp-area="" asp-controller="Productos" asp-action="Catalogo1">Productos</a></li>
+        <li><a asp-area="" asp-controller="QuienesSomos" asp-action="Index1">Quienes Somos</a></li>
+        <li><a asp-area="" asp-controller="Contactenos" asp-action="Index1">Contactenos</a></li>
+    </ul>
+</nav>
+
+<div class="menu">
+    <span class="icon-menu"> Menu</span>
+</div>
+
+<div class="buy">
+
+    <div class="image">
+        <img src="../image/cuaternario.jpg" alt="">
+    </div>
+
+    <div class="information">
+        <h1>Líquido cuaternario</h1>
+        <p>es un detergente desinfectante de alto poder germicida. No necesita enjuague.Es idóneo para ser usado en toda superficie lavable, tales como pisos, paredes, azulejos, espejos, sanitarios. Es recomendado para la desinfección diaria de baños, colegios, hospitales, geriátricos.</p>
+    </div>
+
+    <div class="cart">
+        <a href=""><span class="icon-cart"></span>Agregar al Carrito</a>
+        <a href=""><span class="icon-credit-card"></span>Comprar</a>
+    </div>
+
+</div>
+

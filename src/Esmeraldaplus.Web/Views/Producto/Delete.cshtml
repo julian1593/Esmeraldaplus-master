@@ -1,0 +1,23 @@
+﻿@model Esmeraldaplus.Core.Domain.Producto
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/crud.cshtml";
+}
+
+<link href="~/css/borrar.css" rel="stylesheet" />
+
+
+<div class="contenido">
+    <h3>BORRAR PRODUCTO</h3>
+    <p>ID Producto: @Html.DisplayFor(model => model.IdProducto)</p>
+    <p>Cantidad del Producto: @Html.DisplayFor(model => model.CantidaadProducto)</p>
+    <p>Descripción: @Html.DisplayFor(model => model.Descripcion)</p>
+    <p>Precio Porducto: @Html.DisplayFor(model => model.PrecioProducto)</p>
+    <p>Id Tipo Producto: @Html.DisplayFor(model => model.IdTipoProductoNavigation.IdTipoProducto)</p>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdProducto" />
+        <input type="submit" value="Delete" class="btn btn-danger delete" /> |
+        <a asp-action="Index" class="back">Back to List</a>
+    </form>
+</div>

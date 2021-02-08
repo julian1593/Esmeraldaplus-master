@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Producto3";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Vista_Genelar {
+    <link rel="stylesheet" href="../css/buy.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+}
+
+<nav>
+    <ul>
+        <li><a asp-area="" asp-controller="Home" asp-action="Index1">Inicio</a></li>
+        <li><a asp-area="" asp-controller="Productos" asp-action="Catalogo1">Productos</a></li>
+        <li><a asp-area="" asp-controller="QuienesSomos" asp-action="Index1">Quienes Somos</a></li>
+        <li><a asp-area="" asp-controller="Contactenos" asp-action="Index1">Contactenos</a></li>
+    </ul>
+</nav>
+
+<div class="menu">
+    <span class="icon-menu"> Menu</span>
+</div>
+
+<div class="buy">
+
+    <div class="image">
+        <img src="../image/jabones.jpg" alt="">
+    </div>
+
+    <div class="information">
+        <h1>JABON ANTIBACTERIAL</h1>
+        <p>
+            Este tipo de jabón contiene ingredientes antimicrobianos cuya
+            función principal es controlar la contaminación por microorganismos,
+            trayendo consigo la prevención de enfermedades como infecciones de
+            piel y gastrointestinales, entre otras.
+        </p>
+    </div>
+
+    <div class="cart">
+        <a href=""><span class="icon-cart"></span>Agregar al Carrito</a>
+        <a href=""><span class="icon-credit-card"></span>Comprar</a>
+    </div>
+
+</div>
+

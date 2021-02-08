@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home admin";
+    Layout = "~/Views/Shared/plantilla - admin.cshtml";
+}
+
+@section homeadmin{
+    <link href="~/css/home-admin.css" rel="stylesheet" />
+}
+
+<main>
+    <div class="menu-admin">
+        <a asp-area="" asp-controller="homeadmin" asp-action="Index"><span class="icon-home icon1"></span><br><p>Inicio</p></a>
+        <a asp-area="" asp-controller="usuarios" asp-action="Index"><span class="icon-user icon2"></span><br><p>Lista de Usuarios</p></a>
+        <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><span class="icon-user-check icon3"><br><p>Config. Cuenta</p></span></a>
+        <a asp-area="" asp-controller="producto" asp-action="Index"><span class="icon-inventory icon4"><br><p>Productos</p></span></a>
+        <a asp-area="" asp-controller="inventario" asp-action="Index"><span class="icon-inventory icon5"><br><p>Inventario</p></span></a>
+    </div>
+</main>
+
+
+<div class="quick-access">
+    <h1>Acceso Rapido</h1>
+    <div class="inventory-products">
+        <h2>Agregar Productos</h2>
+        <P>Agrega un producto al listado de productos de la pagina</P>
+        <a asp-area="" asp-controller="producto" asp-action="Create">AGREGAR</a>
+    </div>
+
+    <div class="inventory-supplies">
+        <h2>Agregar Usuario</h2>
+        <P>Registre un usuario en la pagina, puede ser cliente o administrador.</P>
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">AGREGAR</a>
+    </div>
+
+    <div class="account-config">
+        <h2>Configuración de la Cuenta</h2>
+        <P>Acceda a la configuración de la cuenta de su interfaz como administrador</P>
+        <a class="userName" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Configuración</a>
+    </div>
+</div>
+
+

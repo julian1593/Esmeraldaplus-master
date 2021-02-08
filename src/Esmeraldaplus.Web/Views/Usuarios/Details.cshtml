@@ -1,0 +1,26 @@
+﻿@model Esmeraldaplus.Core.Domain.Aspnetusers
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/crud.cshtml";
+}
+
+<link href="~/css/detalles.css" rel="stylesheet" />
+
+
+<div class="contenido">
+
+    <h3>DETALLES DEL PRODUCTO</h3>
+
+    <p>Nombre de Usuario: @Html.DisplayFor(model => model.UserName)</p>
+
+
+    <p>Correo Electronico: @Html.DisplayFor(model => model.Email)</p>
+
+
+    <p>Numero Telefonico: @Html.DisplayFor(model => model.PhoneNumber)</p>
+
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="edit">Edit</a> |
+    <a asp-action="Index" class="back">Back to List</a>
+</div>
+
